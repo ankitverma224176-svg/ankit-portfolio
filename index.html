@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Developer & Data Analyst</title>
+    <meta name="description" content="My personal portfolio showcasing software development and data analytics projects.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+             font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #111c32;
+            position: sticky;
+            top: 0;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 65px 8%;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #cbd5e1;
+            margin: 12px 0 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            padding: 11px 20px;
+            border-radius: 7px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        h2.section-title {
+            font-size: 30px;
+            margin-bottom: 22px;
+            color: #38bdf8;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 23px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p, .about-text {
+            color: #cbd5e1;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skills span {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 9px 15px;
+            border-radius: 20px;
+        }
+
+        .contact a {
+            color: #38bdf8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            background: #111c32;
+            color: #cbd5e1;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>MyPortfolio</h2>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <img src="./profile.jpg.jpeg.jpeg"alt="Ankit Verma"
+        class="profile-photo">
+        <h1>Hi, I'm <span>Ankit Verma</span></h1>
+        <h2>Software Developer & Data Analyst</h2>
+        <p>
+            I enjoy building useful web applications and turning
+            data into meaningful insights. I am continuously
+            learning and developing my technical skills.
+        </p>
+        <div>
+            <a class="btn" href="#projects">View My Projects</a>
+            <a class="btn" href="#contact">Contact Me</a>
+            <a href="./Ankit Resume.pdf" dowmload>
+                Download Resume
+            </a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+           I am a passionate Software Developer and Data Analyst with skills in web development,
+            C#/.NET, SQL, Microsoft Excel, and Power BI. I enjoy building user-friendly applications
+             and analyzing data to generate meaningful insights. 
+             I am eager to learn new technologies and contribute to real-world projects.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Software Development</h3>
+                <div class="skills">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>C# / .NET</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Data Analytics</h3>
+                <div class="skills">
+                    <span>Excel</span>
+                    <span>SQL</span>
+                    <span>Power BI</span>
+                    <span>Data Visualization</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    A responsive website to showcase my skills,
+                    projects and professional profile.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Sales Data Analysis</h3>
+                <p>
+                    An analysis project to explore sales,
+                    calculate performance and identify trends
+                    using Excel.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Web Application</h3>
+                <p>
+                    A web development project demonstrating
+                    user interface design and application logic.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <p>Email: <a href="mailto:ankitverma224176@gmail.com">ankitverma224176@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/ankitverma224176-svg"target="_blank">GitHub</a>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/ankit-verma-aba582380/" target="_blank">
+            linkedin
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 Your Name | Software Developer & Data Analyst</p>
+    </footer>
+
+</body>
+</html>
