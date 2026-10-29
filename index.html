@@ -146,6 +146,87 @@
                 font-size: 14px;
             }
         }
+        .skills span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skills span img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+/* BLACK & WHITE THEME */
+body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* LIGHT MODE */
+body:not(.dark-mode) nav,
+body:not(.dark-mode) .card {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #000000;
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode nav,
+body.dark-mode .card {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff;
+}
+
+/* All text remains clearly visible */
+body:not(.dark-mode) h1,
+body:not(.dark-mode) h2,
+body:not(.dark-mode) h3,
+body:not(.dark-mode) p,
+body:not(.dark-mode) a,
+body:not(.dark-mode) .skills span {
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode a,
+body.dark-mode .skills span {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Skills */
+.skills span {
+    background: transparent !important;
+    text-shadow: none !important;
+}
+
+/* Theme button */
+#theme-toggle {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+body.dark-mode #theme-toggle {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
     </style>
 </head>
 
@@ -153,12 +234,14 @@
 
     <nav>
         <h2>MyPortfolio</h2>
+        <button id="theme-toggle" type="button">🌙 Dark Mode</button>
         <div>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
+            <a href="#education">Education</a>
         </div>
     </nav>
 
@@ -175,9 +258,12 @@
         <div>
             <a class="btn" href="#projects">View My Projects</a>
             <a class="btn" href="#contact">Contact Me</a>
-            <a href="./Ankit Resume.pdf" dowmload>
+            <a href="./Ankit Resume  (1).pdf" dowmload>
                 Download Resume
             </a>
+            <a href="#contact" class="btn">Hire me</a>
+
+
         </div>
     </section>
 
@@ -189,33 +275,54 @@
              and analyzing data to generate meaningful insights. 
              I am eager to learn new technologies and contribute to real-world projects.
         </p>
-    </section>
+        <section id="education">
+    <h2 class="section-title">Education</h2>
+
+    <div class="cards">
+        <div class="card">
+            <div style="font-size: 35px;">🎓</div>
+            <h3>Bachelor of Technology (B.Tech)</h3>
+            <p>Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p>
+        </div>
+    </div>
+</section>
 
     <section id="skills">
         <h2 class="section-title">Technical Skills</h2>
+        <div class="card">
+    <h3>Software Development</h3>
 
-        <div class="cards">
-            <div class="card">
-                <h3>Software Development</h3>
-                <div class="skills">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>React</span>
-                    <span>C# / .NET</span>
-                </div>
-            </div>
+        <div class="skills">
+    <span><img src="https://cdn.simpleicons.org/html5/E34F26" alt=""> HTML</span>
+    <span><img src="https://cdn.simpleicons.org/css3/1572B6" alt=""> CSS</span>
+    <span><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt=""> JavaScript</span>
+    <span><img src="https://cdn.simpleicons.org/react/61DAFB" alt=""> React</span>
+    <span><img src="https://cdn.simpleicons.org/dotnet/512BD4" alt=""> C# / .NET</span>
+    <span><img src="https://cdn.simpleicons.org/python/3776AB" alt=""> Python</span>
+    <span><img src="https://cdn.simpleicons.org/git/F05032" alt=""> Git</span>
+    <span><img src="https://cdn.simpleicons.org/github/181717" alt=""> GitHub</span>
+    <span><img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt=""> Bootstrap</span>
+    <span><img src="https://cdn.simpleicons.org/c/A8B9CC" alt=""> C Programming</span>
+    <span><img src="https://cdn.simpleicons.org/fastapi/009688" alt=""> REST APIs</span>
+    <span><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt=""> Node.js</span>
+    <span><img src="https://cdn.simpleicons.org/openjdk/437291" alt=""> Java</span>
+</div>
 
-            <div class="card">
-                <h3>Data Analytics</h3>
-                <div class="skills">
-                    <span>Excel</span>
-                    <span>SQL</span>
-                    <span>Power BI</span>
-                    <span>Data Visualization</span>
-                </div>
-            </div>
-        </div>
+           <div class="card">
+    <h3>Data Analytics</h3>
+    <div class="skills">
+        <span><img src="https://cdn.simpleicons.org/microsoftexcel/217346" alt=""> Excel</span>
+        <span><img src="https://cdn.simpleicons.org/mysql/4479A1" alt=""> SQL</span>
+        <span><img src="https://cdn.simpleicons.org/powerbi/F2C811" alt=""> Power BI</span>
+        <span><img src="https://cdn.simpleicons.org/tableau/E97627" alt=""> Tableau</span>
+        <span><img src="https://cdn.simpleicons.org/microsoftexcel/217346" alt=""> Power Query</span>
+        <span><img src="https://cdn.simpleicons.org/powerbi/F2C811" alt=""> DAX</span>
+        <span><img src="https://cdn.simpleicons.org/microsoftexcel/217346" alt=""> Advanced Excel</span>
+        <span><img src="https://cdn.simpleicons.org/mysql/4479A1" alt=""> SQL Joins</span>
+        <span><img src="https://cdn.simpleicons.org/googleanalytics/E37400" alt=""> Data Visualization</span>
+        <span><img src="https://cdn.simpleicons.org/googlesheets/34A853" alt=""> Basic Statistics</span>
+    </div>
+</div>
     </section>
 
     <section id="projects">
@@ -261,6 +368,19 @@
     <footer>
         <p>© 2026 Your Name | Software Developer & Data Analyst</p>
     </footer>
+<script>
+    const themeButton = document.getElementById("theme-toggle");
+
+    themeButton.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            themeButton.textContent = "☀️ Light Mode";
+        } else {
+            themeButton.textContent = "🌙 Dark Mode";
+        }
+    });
+</script>
 
 </body>
 </html>
